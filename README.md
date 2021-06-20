@@ -1,2 +1,2 @@
 # docker
-This repo contains the codes for docker
+This repo contains my practice codes for docker.
