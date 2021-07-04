@@ -1,12 +1,11 @@
-# Specify Base Image
+# Select Base Image
 FROM node:alpine
 
-# Intermediary Steps
-WORKDIR /app/multi-container-app
+# Intermediate Steps
+WORKDIR /usr/apps/multi-container-app
 
 COPY ./package.json ./
 RUN npm install
-
 COPY ./ ./
 
 # Startup Command
