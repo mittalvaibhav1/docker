@@ -10,7 +10,11 @@ client.set('visits', 0);
 
 app.get('/', (req, res) => {
     client.get('visits', (error, visits) => {
-        res.send("Number of Visits: ", visits);
+        res.send("Number of Visits: " + visits);
         client.set('visits', parseInt(visits) + 1);
     });
+});
+
+app.listen(8080, () => {
+    console.log("Listening on PORT 8080...");
 });
