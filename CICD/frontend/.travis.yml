@@ -6,4 +6,4 @@ before_install:
   - docker build -t mittalvaibhav1/docker-react-cicd -f Dockerfile.dev .
 
 script:
-  - docker run mittalvaibhav1/docker-react-cicd npm run test -- --coverage
+  - docker run -e CI=true mittalvaibhav1/docker-react-cicd npm run test -- --coverage
